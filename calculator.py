@@ -45,9 +45,8 @@ def main(page: ft.Page):
         except Exception as e:
             return 'Error: ' + str(e)
         
-        # Limita a precisão do resultado a 5 casas decimais
         formatted_result = "{:.5f}".format(value)
-        # Remove os zeros extras à direita do ponto decimal
+
         formatted_result = formatted_result.rstrip('0').rstrip('.') if '.' in formatted_result else formatted_result
         
         return formatted_result
